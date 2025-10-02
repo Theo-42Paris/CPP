@@ -6,7 +6,7 @@
 #    By: tzara <tzara@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/01 13:51:35 by tzara             #+#    #+#              #
-#    Updated: 2025/10/01 16:54:43 by tzara            ###   ########.fr        #
+#    Updated: 2025/10/02 16:14:41 by tzara            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp \
-		contact.cpp \
-		phonebook.cpp \
+		Contact.cpp \
+		PhoneBook.cpp \
 	
 OBJ = $(addprefix obj/, $(patsubst %.cpp, %.o, $(SRC)))
 

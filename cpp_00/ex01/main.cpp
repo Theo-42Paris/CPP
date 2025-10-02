@@ -6,11 +6,11 @@
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 14:33:20 by tzara             #+#    #+#             */
-/*   Updated: 2025/10/01 18:06:54 by tzara            ###   ########.fr       */
+/*   Updated: 2025/10/02 16:12:41 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 int main()
 {
@@ -27,11 +27,11 @@ int main()
             if (!phonebook.add())
                 return (1);
         }
-        // else if (input == "SEACH")
-        // {
-        //     if (phonebook.search() == 1)
-        //         return (1);
-        // }
+        else if (input == "SEARCH")
+        {
+            if (phonebook.search() == 1)
+                return (1);
+        }
         else if (input == "EXIT")
             break;
     }

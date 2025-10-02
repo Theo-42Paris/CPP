@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 14:40:48 by tzara             #+#    #+#             */
-/*   Updated: 2025/10/01 18:00:57 by tzara            ###   ########.fr       */
+/*   Updated: 2025/10/02 16:14:09 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "contact.hpp"
+# include "Contact.hpp"
 # include <iostream>
 # include <cctype>
 # include <string>
@@ -31,6 +31,8 @@ class PhoneBook
         ~PhoneBook();
         bool add();
         int search();
+        void print_header();
+        void print_contact(int index);
 };
 
 #endif
