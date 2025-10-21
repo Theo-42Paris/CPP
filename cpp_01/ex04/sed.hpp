@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   weapon.hpp                                         :+:      :+:    :+:   */
+/*   sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:04:06 by tzara             #+#    #+#             */
-/*   Updated: 2025/10/09 12:07:44 by tzara            ###   ########.fr       */
+/*   Created: 2025/10/09 13:03:11 by tzara             #+#    #+#             */
+/*   Updated: 2025/10/09 13:04:45 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef SED_HPP
+# define SED_HPP
 
-# include <iostream>
+#include <iostream>
+#include <fstream>
+#include <string>
 
-class Weapon
-{
-  private:
-	std::string type;
-
-  public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string &getType() const;
-	void setType(const std::string &newType);
-};
+int checker(const std::string &s1, const std::string &s2);
 
 #endif

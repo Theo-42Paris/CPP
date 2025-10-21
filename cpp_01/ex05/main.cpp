@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:04:06 by tzara             #+#    #+#             */
-/*   Updated: 2025/10/09 12:07:44 by tzara            ###   ########.fr       */
+/*   Created: 2025/10/21 02:25:20 by tzara             #+#    #+#             */
+/*   Updated: 2025/10/21 02:54:16 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "Harl.hpp"
 
-# include <iostream>
-
-class Weapon
+int main(int argc, char **argv)
 {
-  private:
-	std::string type;
+    Harl harl;
 
-  public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string &getType() const;
-	void setType(const std::string &newType);
-};
-
-#endif
+    if (argc != 2 || !argv[1][0])
+    {
+        std::cout << "Erreur arguments\n";
+        return (1);
+    }
+    harl.complain(argv[1]);
+    return (0);
+}

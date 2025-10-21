@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   weapon.hpp                                         :+:      :+:    :+:   */
+/*   checker.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:04:06 by tzara             #+#    #+#             */
-/*   Updated: 2025/10/09 12:07:44 by tzara            ###   ########.fr       */
+/*   Created: 2025/10/09 13:02:55 by tzara             #+#    #+#             */
+/*   Updated: 2025/10/09 13:04:23 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "sed.hpp"
 
-# include <iostream>
-
-class Weapon
+int checker(const std::string &s1, const std::string &s2)
 {
-  private:
-	std::string type;
-
-  public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string &getType() const;
-	void setType(const std::string &newType);
-};
-
-#endif
+    if (s1.empty() || s2.empty())
+    {
+        std::cout << "s1 or s2 cannot be empty" << std::endl;
+        return 1;
+    }
+    if (s1 == s2)
+    {
+        std::cout << "s1 and s2 cannot be the same" << std::endl;
+        return 1;
+    }
+    return 0;
+}
