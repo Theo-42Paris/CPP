@@ -5,17 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tzara <tzara@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/02 16:37:54 by tzara             #+#    #+#              #
-#    Updated: 2025/10/02 16:37:55 by tzara            ###   ########.fr        #
+#    Created: 2025/10/01 13:51:35 by tzara             #+#    #+#              #
+#    Updated: 2025/12/16 15:27:50 by tzara            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = fixed
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = 
+SRC = main.cpp \
+		fixed.cpp \
+
+	
 OBJ = $(addprefix obj/, $(patsubst %.cpp, %.o, $(SRC)))
 
 all: $(NAME)
