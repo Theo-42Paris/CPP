@@ -6,7 +6,7 @@
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 14:15:13 by tzara             #+#    #+#             */
-/*   Updated: 2026/04/01 14:21:47 by tzara            ###   ########.fr       */
+/*   Updated: 2026/04/18 16:07:02 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,18 @@
 #include <string>
 #include "iter.hpp"
 
-// Fonction classique
 template <typename T>
 void print(T const &x)
 {
     std::cout << x << std::endl;
 }
 
-// Fonction qui modifie (non const)
 template <typename T>
 void increment(T &x)
 {
     x++;
 }
 
-// Spécialisation pour string (optionnel)
 void toUpper(std::string &str)
 {
     for (size_t i = 0; i < str.length(); i++)
@@ -37,7 +34,6 @@ void toUpper(std::string &str)
 
 int main(void)
 {
-    // 🔹 Test avec int
     int arr[] = {1, 2, 3, 4, 5};
     int len = 5;
 
@@ -51,7 +47,6 @@ int main(void)
 
     std::cout << "------------------" << std::endl;
 
-    // 🔹 Test avec string
     std::string strArr[] = {"hello", "world", "test"};
 
     std::cout << "Original string array:" << std::endl;
@@ -64,7 +59,6 @@ int main(void)
 
     std::cout << "------------------" << std::endl;
 
-    // 🔹 Test avec const array
     const int constArr[] = {10, 20, 30};
 
     std::cout << "Const array:" << std::endl;

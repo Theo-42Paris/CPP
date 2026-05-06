@@ -6,7 +6,7 @@
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 13:27:39 by tzara             #+#    #+#             */
-/*   Updated: 2026/04/02 14:03:35 by tzara            ###   ########.fr       */
+/*   Updated: 2026/05/06 14:27:33 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,78 +20,80 @@ template <typename T>
 class Array {
 
 	private:
-		T				*_data;
-		unsigned int	_size;
+		T				*data;
+		unsigned int	size;
 
 	public:
-		Array() : _data(NULL), _size(0) {}
+		Array() : data(NULL), size(0) 
+		{	
+		}
 		
-		Array(unsigned int n) : _data(NULL), _size(n) 
+		Array(unsigned int n) : data(NULL), size(n) 
 		{
 			if (n > 0) 
 			{
-				_data = new T[n];
+				data = new T[n];
 				unsigned int i = 0;
 				while (i < n)
 				{
-					_data[i] = T();
+					data[i] = T();
 					i++;
 				}
 			}
 		}
 
-		Array(Array const &copy) : _data(NULL), _size(0)
+		Array(Array const &copy) : data(NULL), size(0)
 		{
 			*this = copy;
 		}
 		
-		Array	&operator=(Array const &copy) 
+		Array	&operator=(Array const &other) 
 		{
-			if (this != &copy) 
+			if (this != &other) 
 			{
-				if (_data)
-					delete[] _data;
-				_size = copy._size;
-				if (_size > 0) 
+				if (data)
+					delete[] data;
+				size = other.size;
+				if (size > 0) 
 				{
-					_data = new T[_size];
+					data = new T[size];
 					unsigned int i = 0; 
-					while (i < _size)
+					while (i < size)
 					{
-						_data[i] = copy._data[i];
+						data[i] = other.data[i];
 						i++;
 					}
 				}
 				else 
-					_data = NULL;
+					data = NULL;
 			}
 			return *this;
 		}
 
 		~Array() 
 		{
-			if (_data) 
-				delete[] _data;
+			if (data) 
+				delete[] data;
 		}
 
 		T	&operator[](unsigned int index) 
 		{
-			if (index >= _size)
+			if (index >= size)
 				throw std::out_of_range("Index out of bounds");
-			return _data[index];
+			return data[index];
 		}
 		
 		T const	&operator[](unsigned int index) const 
 		{
-			if (index >= _size)
+			if (index >= size)
 				throw std::out_of_range("Index out of bounds");
-			return _data[index];
+			return data[index];
 		}
 
-		unsigned int	size() const 
-			return _size;
+		unsigned int	ft_size() const
+		{
+			return (size);
+		}
 };
-
-#include "Array.hpp"
 
 #endif

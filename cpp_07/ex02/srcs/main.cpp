@@ -6,7 +6,7 @@
 /*   By: tzara <tzara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 13:27:05 by tzara             #+#    #+#             */
-/*   Updated: 2026/04/02 13:44:28 by tzara            ###   ########.fr       */
+/*   Updated: 2026/04/21 14:19:10 by tzara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ int main() {
     std::cout << "=== Test 1: Constructeur par défaut ===" << std::endl;
     {
         Array<int> empty;
-        std::cout << "Taille : " << empty.size() << std::endl;
+        std::cout << "Taille : " << empty.ft_size() << std::endl;
     }
 
     std::cout << "\n=== Test 2: Constructeur avec taille ===" << std::endl;
     {
         Array<int> arr(5);
-        std::cout << "Taille : " << arr.size() << std::endl;
+        std::cout << "Taille : " << arr.ft_size() << std::endl;
         
         std::cout << "Valeurs par défaut : ";
-        for (unsigned int i = 0; i < arr.size(); i++) {
+        for (unsigned int i = 0; i < arr.ft_size(); i++) {
             std::cout << arr[i] << " ";
         }
         std::cout << std::endl;
@@ -37,12 +37,12 @@ int main() {
     {
         Array<int> arr(5);
         
-        for (unsigned int i = 0; i < arr.size(); i++) {
+        for (unsigned int i = 0; i < arr.ft_size(); i++) {
             arr[i] = i * 10;
         }
         
         std::cout << "Valeurs modifiées : ";
-        for (unsigned int i = 0; i < arr.size(); i++) {
+        for (unsigned int i = 0; i < arr.ft_size(); i++) {
             std::cout << arr[i] << " ";
         }
         std::cout << std::endl;
@@ -58,13 +58,13 @@ int main() {
         Array<int> copy(original);
         
         std::cout << "Original : ";
-        for (unsigned int i = 0; i < original.size(); i++) {
+        for (unsigned int i = 0; i < original.ft_size(); i++) {
             std::cout << original[i] << " ";
         }
         std::cout << std::endl;
         
         std::cout << "Copy : ";
-        for (unsigned int i = 0; i < copy.size(); i++) {
+        for (unsigned int i = 0; i < copy.ft_size(); i++) {
             std::cout << copy[i] << " ";
         }
         std::cout << std::endl;
@@ -87,13 +87,13 @@ int main() {
         b = a;
         
         std::cout << "a : ";
-        for (unsigned int i = 0; i < a.size(); i++) {
+        for (unsigned int i = 0; i < a.ft_size(); i++) {
             std::cout << a[i] << " ";
         }
         std::cout << std::endl;
         
         std::cout << "b : ";
-        for (unsigned int i = 0; i < b.size(); i++) {
+        for (unsigned int i = 0; i < b.ft_size(); i++) {
             std::cout << b[i] << " ";
         }
         std::cout << std::endl;
@@ -126,7 +126,7 @@ int main() {
         arr[2] = "!";
         
         std::cout << "Contenu : ";
-        for (unsigned int i = 0; i < arr.size(); i++) {
+        for (unsigned int i = 0; i < arr.ft_size(); i++) {
             std::cout << arr[i] << " ";
         }
         std::cout << std::endl;
