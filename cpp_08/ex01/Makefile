@@ -6,7 +6,7 @@
 #    By: tzara <tzara@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/14 16:26:22 by tzara             #+#    #+#              #
-#    Updated: 2026/04/14 16:26:28 by tzara            ###   ########.fr        #
+#    Updated: 2026/05/13 13:59:57 by tzara            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME =  span
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iincludes
 
-SRC = srcs/main.cpp 
+SRC = srcs/main.cpp \
+		srcs/Span.cpp \
 
 OBJ = $(addprefix obj/, $(patsubst %.cpp, %.o, $(SRC)))
 
